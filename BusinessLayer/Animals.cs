@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class LandAnimals
+    public class Animals
     {
         [Key]
         public int ID { get; private set; }
@@ -17,23 +17,18 @@ namespace BusinessLayer
         [Required]
         public string Type { get; set; }
         [Required]
-        public string Order { get; set; }
+        public IEnumerable<Habitats> Habitat { get; set; }
         [Required]
-        public int Limbs { get; set; }
-        [Required]
-        public string Habitat { get; set; }
+        public IEnumerable<Diets> Diet { get; set; }
         [Required]
         public int Lifespan { get; set; }
-
-        private LandAnimals()
+        private Animals()
         { }
-        public LandAnimals(string name, string type, string order, int limbs, string habitat, int lifespan)
+
+        public Animals(string name, string type, int lifespan)
         {
             Name = name;
             Type = type;
-            Order = order;
-            Limbs = limbs;
-            Habitat = habitat;
             Lifespan = lifespan;
         }
     }

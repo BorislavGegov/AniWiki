@@ -8,36 +8,35 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class WaterAnimals
+    public class Habitats
     {
         [Key]
         public int ID { get; private set; }
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Type { get; set; }
-        [Required]
-        public string Order { get; set; }
-        [Required]
         public int Temperature { get; set; }
         [Required]
-        public int Depth { get; set; }
+        public int Area { get; set; }
         [Required]
-        public string Habitat { get; set; }
+        public string Food { get; set; }
         [Required]
-        public int Lifespan { get; set; }
-        private WaterAnimals()
+        public string Water { get; set; }
+        [Required]
+        public string Light { get; set; }
+        [Required]
+        public IEnumerable<Animals> Animal { get; set; }
+        public Habitats()
         { }
-        public WaterAnimals(string name, string type, string order, int temperature, int depth, string habitat, int lifespan)
+
+        public Habitats(string name, int temperature, int area, string food, string water, string light)
         {
             Name = name;
-            Type = type;
-            Order = order;
             Temperature = temperature;
-            Depth = depth;
-            Habitat = habitat;
-            Lifespan = lifespan;
+            Area = area;
+            Food = food;
+            Water = water;
+            Light = light;
         }
-
     }
 }
