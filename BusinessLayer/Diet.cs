@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class Diets
+    public class Diet
     {
         [Key]
         public int ID { get; private set; }
@@ -19,11 +19,11 @@ namespace BusinessLayer
         [Required]
         public string Complexity { get; set; }
         [Required]
-        public IEnumerable<Animals> Animal { get; set; }
-        public Diets()
+        public IEnumerable<Species> Species { get; set; }
+        public Diet()
         { }
 
-        public Diets(string order, int volume, string complexity)
+        public Diet(string order, int volume, string complexity)
         {
             Order = order;
             Volume = volume;
