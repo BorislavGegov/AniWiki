@@ -58,7 +58,7 @@ namespace TestingLayer
 
             Habitat genre1 = _habitatContext.Read(1);
 
-            Assert.IsTrue(genre1.Name == "poem", "Habitat Update() does not change name!");
+            Assert.IsTrue(genre1.Name == "Havanna", "Habitat Update() does not change name!");
         }
 
         [Test]

@@ -58,7 +58,7 @@ namespace TestingLayer
 
             Species species1 = _speciesContext.Read(1);
 
-            Assert.IsTrue(species1.Name == "poem", "Species Update() does not change name!");
+            Assert.IsTrue(species1.Name == "kotka", "Species Update() does not change name!");
         }
 
         [Test]
