@@ -31,5 +31,9 @@ namespace BusinessLayer
             Type = type;
             Lifespan = lifespan;
         }
+        public Species(int id, string name, string type, int lifespan) : this(name, type, lifespan)
+        {
+            ID = id;
+        }
     }
 }

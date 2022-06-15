@@ -38,5 +38,9 @@ namespace BusinessLayer
             Water = water;
             Light = light;
         }
+        public Habitat(int id, string name, int temperature, int area, string food, string water, string light) : this(name, temperature, area, food, water, light)
+        {
+            ID = id;
+        }
     }
 }

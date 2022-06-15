@@ -13,11 +13,11 @@ namespace BusinessLayer
         [Key]
         public int ID { get; private set; }
         [Required]
-        public string Order { get; set; }
+        public string Order { get; set; } 
         [Required]
-        public int Volume { get; set; }
+        public int Volume { get; set; } 
         [Required]
-        public string Complexity { get; set; }
+        public string Complexity { get; set; } 
         [Required]
         public IEnumerable<Species> Species { get; set; }
         public Diet()
@@ -28,6 +28,10 @@ namespace BusinessLayer
             Order = order;
             Volume = volume;
             Complexity = complexity;
+        }
+        public Diet(int id, string order, int volume, string complexity) : this(order, volume, complexity)
+        {
+            ID = id;
         }
     }
 }
