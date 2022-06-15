@@ -28,7 +28,7 @@ namespace TestingLayer
         {
             int habitatsBefore = _habitatContext.ReadAll().Count();
 
-            _habitatContext.Create(new Habitat("novel"));
+            _habitatContext.Create(new Habitat("Savanna", 40, 600, "mnogo", "voda", "svetlo"));
 
             int habitatsAfter = _habitatContext.ReadAll().Count();
 
@@ -38,7 +38,7 @@ namespace TestingLayer
         [Test]
         public void TestReadGenre()
         {
-            _habitatContext.Create(new Habitat("novel"));
+            _habitatContext.Create(new Habitat("Savanna", 40, 600, "mnogo", "voda", "svetlo"));
 
             Habitat genre = _habitatContext.Read(1);
 
@@ -48,11 +48,11 @@ namespace TestingLayer
         [Test]
         public void TestUpdateGenre()
         {
-            _habitatContext.Create(new Habitat("novel"));
+            _habitatContext.Create(new Habitat("Savanna", 40, 600, "mnogo", "voda", "svetlo"));
 
             Habitat genre = _habitatContext.Read(1);
 
-            genre.Name = "poem";
+            genre.Name = "Havanna";
 
             _habitatContext.Update(genre);
 
@@ -64,7 +64,7 @@ namespace TestingLayer
         [Test]
         public void TestDeleteGenre()
         {
-            _habitatContext.Create(new Habitat("Delete genre"));
+            _habitatContext.Create(new Habitat("Savann", 44, 601, "malko", "bez voda", "tumno"));
 
             int habitatsBeforeDeletion = _habitatContext.ReadAll().Count();
 
