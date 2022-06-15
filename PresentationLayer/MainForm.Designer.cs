@@ -29,68 +29,73 @@ namespace PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_species = new System.Windows.Forms.Button();
+            this.btn_habitat = new System.Windows.Forms.Button();
+            this.btn_diet = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_species
             // 
-            this.button1.Location = new System.Drawing.Point(325, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_species.Location = new System.Drawing.Point(213, 87);
+            this.btn_species.Name = "btn_species";
+            this.btn_species.Size = new System.Drawing.Size(150, 104);
+            this.btn_species.TabIndex = 0;
+            this.btn_species.Text = "Species";
+            this.btn_species.UseVisualStyleBackColor = true;
+            this.btn_species.Click += new System.EventHandler(this.btn_species_Click);
             // 
-            // button2
+            // btn_habitat
             // 
-            this.button2.Location = new System.Drawing.Point(325, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_habitat.Location = new System.Drawing.Point(213, 286);
+            this.btn_habitat.Name = "btn_habitat";
+            this.btn_habitat.Size = new System.Drawing.Size(150, 104);
+            this.btn_habitat.TabIndex = 1;
+            this.btn_habitat.Text = "Habitat";
+            this.btn_habitat.UseVisualStyleBackColor = true;
+            this.btn_habitat.Click += new System.EventHandler(this.btn_habitat_Click);
             // 
-            // button3
+            // btn_diet
             // 
-            this.button3.Location = new System.Drawing.Point(325, 256);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_diet.Location = new System.Drawing.Point(452, 87);
+            this.btn_diet.Name = "btn_diet";
+            this.btn_diet.Size = new System.Drawing.Size(150, 104);
+            this.btn_diet.TabIndex = 2;
+            this.btn_diet.Text = "Diet";
+            this.btn_diet.UseVisualStyleBackColor = true;
+            this.btn_diet.Click += new System.EventHandler(this.btn_diet_Click);
             // 
-            // button4
+            // btn_exit
             // 
-            this.button4.Location = new System.Drawing.Point(325, 359);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_exit.Location = new System.Drawing.Point(452, 286);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(150, 104);
+            this.btn_exit.TabIndex = 3;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.btn_diet);
+            this.Controls.Add(this.btn_habitat);
+            this.Controls.Add(this.btn_species);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_species;
+        private System.Windows.Forms.Button btn_habitat;
+        private System.Windows.Forms.Button btn_diet;
+        private System.Windows.Forms.Button btn_exit;
     }
 }
