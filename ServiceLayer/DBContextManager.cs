@@ -8,7 +8,7 @@ using DataLayer;
 
 namespace ServiceLayer
 {
-    class DBContextManager
+    public class DBContextManager
     {
         private static AnimalDbContext _context;
         private static SpeciesContext _speciesContext;
@@ -31,33 +31,33 @@ namespace ServiceLayer
         {
             return _context;
         }
-        public static SpeciesContext CreateRegionContext(AnimalDbContext context)
+        public static SpeciesContext CreateSpeciesContext(AnimalDbContext context)
         {
             _speciesContext = new SpeciesContext(context);
             return _speciesContext;
         }
 
-        public static SpeciesContext GetRegionContext()
+        public static SpeciesContext GetSpeciesContext()
         {
             return _speciesContext;
         }
 
-        public static HabitatContext CreateInterestContext(AnimalDbContext context)
+        public static HabitatContext CreateHabitatContext(AnimalDbContext context)
         {
             _habitatContext = new HabitatContext(context);
             return _habitatContext;
         }
 
-        public static HabitatContext GetInterestContext()
+        public static HabitatContext GetHabitatContext()
         {
             return _habitatContext;
         }
-        public static DietContext CreateUserContext(AnimalDbContext context)
+        public static DietContext CreateDietContext(AnimalDbContext context)
         {
             _dietContext = new DietContext(context);
             return (_dietContext);
         }
-        public static DietContext GetUserContext()
+        public static DietContext GetDietContext()
         {
             return _dietContext;
         }

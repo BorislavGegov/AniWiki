@@ -90,9 +90,9 @@ namespace PresentationLayer
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(42, 291);
+            this.btn_create.Location = new System.Drawing.Point(42, 277);
             this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(119, 40);
+            this.btn_create.Size = new System.Drawing.Size(138, 62);
             this.btn_create.TabIndex = 6;
             this.btn_create.Text = "Create";
             this.btn_create.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@ namespace PresentationLayer
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(233, 291);
+            this.btn_update.Location = new System.Drawing.Point(215, 277);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(119, 40);
+            this.btn_update.Size = new System.Drawing.Size(137, 62);
             this.btn_update.TabIndex = 7;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@ namespace PresentationLayer
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(42, 383);
+            this.btn_delete.Location = new System.Drawing.Point(42, 359);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(119, 40);
+            this.btn_delete.Size = new System.Drawing.Size(138, 64);
             this.btn_delete.TabIndex = 8;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@ namespace PresentationLayer
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(233, 383);
+            this.btn_exit.Location = new System.Drawing.Point(215, 359);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(119, 40);
+            this.btn_exit.Size = new System.Drawing.Size(137, 64);
             this.btn_exit.TabIndex = 9;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;

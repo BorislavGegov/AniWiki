@@ -50,7 +50,7 @@ namespace PresentationLayer
             {
                 if (selectedDiet != null)
                 {
-                    MessageBox.Show("You can't create duplicated diet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You can't create a duplicated diet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -113,7 +113,7 @@ namespace PresentationLayer
             }
             else
             {
-                MessageBox.Show("You must select user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You must select a diet!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
