@@ -53,7 +53,7 @@ namespace PresentationLayer
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(165, 29);
+            this.txtBox_name.Location = new System.Drawing.Point(165, 33);
             this.txtBox_name.Name = "txtBox_name";
             this.txtBox_name.Size = new System.Drawing.Size(138, 27);
             this.txtBox_name.TabIndex = 0;
@@ -96,7 +96,7 @@ namespace PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 29);
+            this.label1.Location = new System.Drawing.Point(54, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 6;

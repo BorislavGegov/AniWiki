@@ -46,7 +46,7 @@ namespace PresentationLayer
             // 
             // txtBox_order
             // 
-            this.txtBox_order.Location = new System.Drawing.Point(179, 40);
+            this.txtBox_order.Location = new System.Drawing.Point(171, 33);
             this.txtBox_order.Name = "txtBox_order";
             this.txtBox_order.Size = new System.Drawing.Size(132, 27);
             this.txtBox_order.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace PresentationLayer
             // 
             // txtBox_complexity
             // 
-            this.txtBox_complexity.Location = new System.Drawing.Point(179, 168);
+            this.txtBox_complexity.Location = new System.Drawing.Point(171, 171);
             this.txtBox_complexity.Multiline = true;
             this.txtBox_complexity.Name = "txtBox_complexity";
             this.txtBox_complexity.Size = new System.Drawing.Size(132, 57);
@@ -64,7 +64,7 @@ namespace PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 43);
+            this.label1.Location = new System.Drawing.Point(54, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 3;
@@ -90,9 +90,9 @@ namespace PresentationLayer
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(54, 356);
+            this.btn_create.Location = new System.Drawing.Point(54, 357);
             this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(106, 37);
+            this.btn_create.Size = new System.Drawing.Size(107, 40);
             this.btn_create.TabIndex = 6;
             this.btn_create.Text = "Create";
             this.btn_create.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@ namespace PresentationLayer
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(192, 356);
+            this.btn_update.Location = new System.Drawing.Point(194, 357);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(119, 37);
+            this.btn_update.Size = new System.Drawing.Size(109, 40);
             this.btn_update.TabIndex = 7;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@ namespace PresentationLayer
             this.btn_delete.ForeColor = System.Drawing.Color.Red;
             this.btn_delete.Location = new System.Drawing.Point(54, 421);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(106, 37);
+            this.btn_delete.Size = new System.Drawing.Size(110, 40);
             this.btn_delete.TabIndex = 8;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@ namespace PresentationLayer
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(192, 421);
+            this.btn_exit.Location = new System.Drawing.Point(194, 421);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(119, 37);
+            this.btn_exit.Size = new System.Drawing.Size(109, 40);
             this.btn_exit.TabIndex = 9;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -134,17 +134,17 @@ namespace PresentationLayer
             // 
             this.dataGridView_diet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridView_diet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_diet.Location = new System.Drawing.Point(341, 40);
+            this.dataGridView_diet.Location = new System.Drawing.Point(347, 33);
             this.dataGridView_diet.Name = "dataGridView_diet";
             this.dataGridView_diet.RowHeadersWidth = 51;
             this.dataGridView_diet.RowTemplate.Height = 29;
-            this.dataGridView_diet.Size = new System.Drawing.Size(447, 418);
+            this.dataGridView_diet.Size = new System.Drawing.Size(441, 428);
             this.dataGridView_diet.TabIndex = 10;
             this.dataGridView_diet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_diet_CellClick);
             // 
             // numeric_volume
             // 
-            this.numeric_volume.Location = new System.Drawing.Point(178, 107);
+            this.numeric_volume.Location = new System.Drawing.Point(170, 105);
             this.numeric_volume.Name = "numeric_volume";
             this.numeric_volume.Size = new System.Drawing.Size(133, 27);
             this.numeric_volume.TabIndex = 11;
@@ -154,7 +154,7 @@ namespace PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(800, 482);
             this.Controls.Add(this.numeric_volume);
             this.Controls.Add(this.dataGridView_diet);
             this.Controls.Add(this.btn_exit);
