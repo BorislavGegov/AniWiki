@@ -53,112 +53,105 @@ namespace PresentationLayer
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(144, 22);
-            this.txtBox_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBox_name.Location = new System.Drawing.Point(165, 29);
             this.txtBox_name.Name = "txtBox_name";
-            this.txtBox_name.Size = new System.Drawing.Size(121, 23);
+            this.txtBox_name.Size = new System.Drawing.Size(138, 27);
             this.txtBox_name.TabIndex = 0;
             // 
             // txtBox_food
             // 
-            this.txtBox_food.Location = new System.Drawing.Point(144, 141);
-            this.txtBox_food.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBox_food.Location = new System.Drawing.Point(165, 188);
             this.txtBox_food.Name = "txtBox_food";
-            this.txtBox_food.Size = new System.Drawing.Size(121, 23);
+            this.txtBox_food.Size = new System.Drawing.Size(138, 27);
             this.txtBox_food.TabIndex = 1;
             // 
             // txtBox_water
             // 
-            this.txtBox_water.Location = new System.Drawing.Point(144, 181);
-            this.txtBox_water.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBox_water.Location = new System.Drawing.Point(165, 238);
             this.txtBox_water.Name = "txtBox_water";
-            this.txtBox_water.Size = new System.Drawing.Size(121, 23);
+            this.txtBox_water.Size = new System.Drawing.Size(138, 27);
             this.txtBox_water.TabIndex = 2;
             // 
             // txtBox_light
             // 
-            this.txtBox_light.Location = new System.Drawing.Point(144, 221);
-            this.txtBox_light.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBox_light.Location = new System.Drawing.Point(165, 295);
             this.txtBox_light.Name = "txtBox_light";
-            this.txtBox_light.Size = new System.Drawing.Size(121, 23);
+            this.txtBox_light.Size = new System.Drawing.Size(138, 27);
             this.txtBox_light.TabIndex = 3;
             // 
             // numeric_area
             // 
-            this.numeric_area.Location = new System.Drawing.Point(144, 104);
-            this.numeric_area.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numeric_area.Location = new System.Drawing.Point(165, 139);
             this.numeric_area.Name = "numeric_area";
-            this.numeric_area.Size = new System.Drawing.Size(121, 23);
+            this.numeric_area.Size = new System.Drawing.Size(138, 27);
             this.numeric_area.TabIndex = 4;
             // 
             // numeric_temperature
             // 
-            this.numeric_temperature.Location = new System.Drawing.Point(144, 62);
-            this.numeric_temperature.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numeric_temperature.Location = new System.Drawing.Point(165, 83);
             this.numeric_temperature.Name = "numeric_temperature";
-            this.numeric_temperature.Size = new System.Drawing.Size(121, 23);
+            this.numeric_temperature.Size = new System.Drawing.Size(138, 27);
             this.numeric_temperature.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 25);
+            this.label1.Location = new System.Drawing.Point(49, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 64);
+            this.label2.Location = new System.Drawing.Point(53, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Temperature";
+            this.label2.Text = "Temperature:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 105);
+            this.label3.Location = new System.Drawing.Point(54, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Area";
+            this.label3.Text = "Area:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 143);
+            this.label4.Location = new System.Drawing.Point(53, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Food";
+            this.label4.Text = "Food:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 183);
+            this.label5.Location = new System.Drawing.Point(54, 241);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Water";
+            this.label5.Text = "Water:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 224);
+            this.label6.Location = new System.Drawing.Point(53, 295);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 15);
+            this.label6.Size = new System.Drawing.Size(45, 20);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Light";
+            this.label6.Text = "Light:";
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(47, 268);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_create.Location = new System.Drawing.Point(54, 357);
             this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(95, 30);
+            this.btn_create.Size = new System.Drawing.Size(109, 40);
             this.btn_create.TabIndex = 12;
             this.btn_create.Text = "Create";
             this.btn_create.UseVisualStyleBackColor = true;
@@ -166,10 +159,11 @@ namespace PresentationLayer
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(46, 302);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_delete.ForeColor = System.Drawing.Color.Red;
+            this.btn_delete.Location = new System.Drawing.Point(54, 421);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(96, 30);
+            this.btn_delete.Size = new System.Drawing.Size(110, 40);
             this.btn_delete.TabIndex = 13;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -177,10 +171,9 @@ namespace PresentationLayer
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(158, 268);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Location = new System.Drawing.Point(194, 357);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(95, 30);
+            this.btn_update.Size = new System.Drawing.Size(109, 40);
             this.btn_update.TabIndex = 14;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -188,10 +181,9 @@ namespace PresentationLayer
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(158, 302);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exit.Location = new System.Drawing.Point(194, 421);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(95, 30);
+            this.btn_exit.Size = new System.Drawing.Size(109, 40);
             this.btn_exit.TabIndex = 15;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -199,21 +191,22 @@ namespace PresentationLayer
             // 
             // dataGridView_habitat
             // 
+            this.dataGridView_habitat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridView_habitat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_habitat.Location = new System.Drawing.Point(304, 25);
-            this.dataGridView_habitat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_habitat.Location = new System.Drawing.Point(347, 33);
             this.dataGridView_habitat.Name = "dataGridView_habitat";
             this.dataGridView_habitat.RowHeadersWidth = 51;
             this.dataGridView_habitat.RowTemplate.Height = 29;
-            this.dataGridView_habitat.Size = new System.Drawing.Size(386, 304);
+            this.dataGridView_habitat.Size = new System.Drawing.Size(441, 428);
             this.dataGridView_habitat.TabIndex = 16;
             this.dataGridView_habitat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_habitat_CellClick);
             // 
             // HabitatForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(800, 482);
             this.Controls.Add(this.dataGridView_habitat);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_update);
@@ -231,7 +224,6 @@ namespace PresentationLayer
             this.Controls.Add(this.txtBox_water);
             this.Controls.Add(this.txtBox_food);
             this.Controls.Add(this.txtBox_name);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HabitatForm";
             this.Text = "HabitatForm";
             ((System.ComponentModel.ISupportInitialize)(this.numeric_area)).EndInit();
