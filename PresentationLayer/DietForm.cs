@@ -136,7 +136,7 @@ namespace PresentationLayer
 
         private bool ValidateData()
         {
-            if (txtBox_order.Text != string.Empty && numeric_volume.Value == 0 && txtBox_complexity.Text != string.Empty)
+            if (txtBox_order.Text != string.Empty && numeric_volume.Value != 0 && txtBox_complexity.Text != string.Empty)
             {
                 return true;
             }

@@ -123,7 +123,7 @@ namespace PresentationLayer
 
         private bool ValidateData()
         {
-            if (txtBox_name.Text != string.Empty && numeric_temperature.Value == 0 && numeric_area.Value == 0 && txtBox_food.Text != string.Empty && txtBox_water.Text != string.Empty && txtBox_light.Text != string.Empty)
+            if (txtBox_name.Text != string.Empty && numeric_temperature.Value != 0 && numeric_area.Value != 0 && txtBox_food.Text != string.Empty && txtBox_water.Text != string.Empty && txtBox_light.Text != string.Empty)
             {
                 return true;
             }

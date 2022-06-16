@@ -121,7 +121,7 @@ namespace PresentationLayer
 
         private bool ValidateData()
         {
-            if (txtBox_name.Text != string.Empty && txtBox_type.Text != string.Empty && numeric_lifespan.Value == 0)
+            if (txtBox_name.Text != string.Empty && txtBox_type.Text != string.Empty && numeric_lifespan.Value != 0)
             {
                 return true;
             }
