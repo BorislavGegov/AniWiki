@@ -46,18 +46,18 @@ namespace PresentationLayer
             // 
             // txtBox_order
             // 
-            this.txtBox_order.Location = new System.Drawing.Point(171, 33);
+            this.txtBox_order.Location = new System.Drawing.Point(161, 33);
             this.txtBox_order.Name = "txtBox_order";
-            this.txtBox_order.Size = new System.Drawing.Size(132, 27);
+            this.txtBox_order.Size = new System.Drawing.Size(142, 27);
             this.txtBox_order.TabIndex = 0;
             this.txtBox_order.TextChanged += new System.EventHandler(this.txtBox_order_TextChanged);
             // 
             // txtBox_complexity
             // 
-            this.txtBox_complexity.Location = new System.Drawing.Point(171, 171);
+            this.txtBox_complexity.Location = new System.Drawing.Point(161, 171);
             this.txtBox_complexity.Multiline = true;
             this.txtBox_complexity.Name = "txtBox_complexity";
-            this.txtBox_complexity.Size = new System.Drawing.Size(132, 57);
+            this.txtBox_complexity.Size = new System.Drawing.Size(142, 57);
             this.txtBox_complexity.TabIndex = 2;
             this.txtBox_complexity.TextChanged += new System.EventHandler(this.txtBox_complexity_TextChanged);
             // 
@@ -126,7 +126,7 @@ namespace PresentationLayer
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(109, 40);
             this.btn_exit.TabIndex = 9;
-            this.btn_exit.Text = "Exit";
+            this.btn_exit.Text = "Home page";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
@@ -144,9 +144,9 @@ namespace PresentationLayer
             // 
             // numeric_volume
             // 
-            this.numeric_volume.Location = new System.Drawing.Point(170, 105);
+            this.numeric_volume.Location = new System.Drawing.Point(161, 105);
             this.numeric_volume.Name = "numeric_volume";
-            this.numeric_volume.Size = new System.Drawing.Size(133, 27);
+            this.numeric_volume.Size = new System.Drawing.Size(142, 27);
             this.numeric_volume.TabIndex = 11;
             // 
             // DietForm

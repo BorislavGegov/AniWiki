@@ -46,23 +46,23 @@ namespace PresentationLayer
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(149, 33);
+            this.txtBox_name.Location = new System.Drawing.Point(168, 33);
             this.txtBox_name.Name = "txtBox_name";
-            this.txtBox_name.Size = new System.Drawing.Size(154, 27);
+            this.txtBox_name.Size = new System.Drawing.Size(135, 27);
             this.txtBox_name.TabIndex = 0;
             // 
             // txtBox_type
             // 
-            this.txtBox_type.Location = new System.Drawing.Point(149, 107);
+            this.txtBox_type.Location = new System.Drawing.Point(168, 107);
             this.txtBox_type.Name = "txtBox_type";
-            this.txtBox_type.Size = new System.Drawing.Size(154, 27);
+            this.txtBox_type.Size = new System.Drawing.Size(135, 27);
             this.txtBox_type.TabIndex = 1;
             // 
             // numeric_lifespan
             // 
-            this.numeric_lifespan.Location = new System.Drawing.Point(149, 181);
+            this.numeric_lifespan.Location = new System.Drawing.Point(168, 181);
             this.numeric_lifespan.Name = "numeric_lifespan";
-            this.numeric_lifespan.Size = new System.Drawing.Size(154, 27);
+            this.numeric_lifespan.Size = new System.Drawing.Size(135, 27);
             this.numeric_lifespan.TabIndex = 2;
             // 
             // label1
@@ -98,7 +98,7 @@ namespace PresentationLayer
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(109, 40);
             this.btn_exit.TabIndex = 13;
-            this.btn_exit.Text = "Exit";
+            this.btn_exit.Text = "Home page";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 

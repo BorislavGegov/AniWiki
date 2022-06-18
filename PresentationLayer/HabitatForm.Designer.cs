@@ -185,7 +185,7 @@ namespace PresentationLayer
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(109, 40);
             this.btn_exit.TabIndex = 15;
-            this.btn_exit.Text = "Exit";
+            this.btn_exit.Text = "Home page";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 

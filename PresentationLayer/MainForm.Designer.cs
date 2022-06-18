@@ -34,6 +34,10 @@ namespace PresentationLayer
             this.btn_diet = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_species
@@ -73,6 +77,7 @@ namespace PresentationLayer
             // 
             // btn_exit
             // 
+            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_exit.ForeColor = System.Drawing.Color.Red;
             this.btn_exit.Location = new System.Drawing.Point(341, 441);
             this.btn_exit.Name = "btn_exit";
@@ -92,18 +97,59 @@ namespace PresentationLayer
             this.label1.TabIndex = 4;
             this.label1.Text = "AniWiki";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 363);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Изготвили:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 393);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Борислав Гегов №1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 421);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Мартин Пенев №17";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 447);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Пламен Паскалев №20";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_diet);
             this.Controls.Add(this.btn_habitat);
             this.Controls.Add(this.btn_species);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Изготвили:";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,5 +163,9 @@ namespace PresentationLayer
         private System.Windows.Forms.Button btn_diet;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
