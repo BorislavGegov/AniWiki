@@ -1,0 +1,119 @@
+2023-11-27 10:28:01,139 ERROR: Exception on /edit_post/8 [GET] [in C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\app\routes.py", line 194, in edit_post
+    form = EditPostForm(post)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\fields\core.py", line 326, in process
+    if self.name in formdata:
+       ^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'Post' is not iterable
+2023-11-27 10:28:56,849 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:28:57,867 ERROR: Exception on /edit_post/8 [GET] [in C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\app\routes.py", line 194, in edit_post
+    form = EditPostForm(post.id)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\wtforms\fields\core.py", line 326, in process
+    if self.name in formdata:
+       ^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'int' is not iterable
+2023-11-27 10:29:59,765 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:30:00,907 ERROR: Exception on /edit_post/8 [GET] [in C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\app\routes.py", line 203, in edit_post
+    return render_template('edit_post.html', form=form, loggedIn=current_user.is_authenticated, page="edit_post")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Student\Desktop\grrr\app\templates\edit_post.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Student\Desktop\grrr\app\templates\base.html", line 65, in top-level template code
+    {% block body %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\app\templates\edit_post.html", line 9, in block 'body'
+    {{ form.about_me.label(class_="form-label") }}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\grrr\venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'app.forms.EditPostForm object' has no attribute 'about_me'
+2023-11-27 10:32:42,890 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:33:53,419 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:35:24,496 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:38:09,435 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:39:08,461 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:44:54,293 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:45:16,415 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:45:56,082 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]
+2023-11-27 10:46:18,905 INFO: Microblog startup [in C:\Users\Student\Desktop\grrr\app\__init__.py:46]

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %} - Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p class="mt-4">
+            {{ form.username.label(class_="form-label") }}
+            {{ form.username(size=32, class_="form-control") }}
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label(class_="form-label") }}
+            {{ form.email(size=64, class_="form-control") }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label(class_="form-label") }}
+            {{ form.password(size=32, class_="form-control form-control-cutoff") }}
+            <span id="passwordHelpBlock" class="form-text">
+                Your password must be 1-32 characters long.
+            </span>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password2.label(class_="form-label") }}
+            {{ form.password2(size=32, class_="form-control form-control-cutoff") }}
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class="mt-5">{{ form.submit() }}</p>
+    </form>
+{% endblock %}
