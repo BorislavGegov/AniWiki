@@ -1,0 +1,133 @@
+2023-11-23 15:22:59,259 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 15:23:39,688 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 15:38:35,683 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 16:54:37,902 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:01:47,789 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:02:01,124 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:06:13,372 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:07:09,392 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:07:13,390 ERROR: Exception on /index [POST] [in C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\app\routes.py", line 67, in index
+    post = Post(body=form.post.data, author=current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 2142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'author' is an invalid keyword argument for Post
+2023-11-23 17:08:19,698 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:08:21,426 ERROR: Exception on / [POST] [in C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\app\routes.py", line 67, in index
+    post = Post(body=form.post.data, author=current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 2142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'author' is an invalid keyword argument for Post
+2023-11-23 17:14:35,025 ERROR: Exception on / [POST] [in C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\app\routes.py", line 67, in index
+    post = Post(body=form.post.data, author=current_user.username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 2142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'author' is an invalid keyword argument for Post
+2023-11-23 17:14:45,642 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:15:12,627 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:15:15,815 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
+2023-11-23 17:15:19,577 ERROR: Exception on / [POST] [in C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Intern\Desktop\folder\app\routes.py", line 67, in index
+    post = Post(body=form.post.data, author=current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Intern\Desktop\folder\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 2142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'author' is an invalid keyword argument for Post
+2023-11-23 17:16:06,797 INFO: Microblog startup [in C:\Users\Intern\Desktop\folder\app\__init__.py:47]
