@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <img class="rounded-2 mb-3" src="{{ user.avatar(128) }}" alt="avatar">
+        <h1>@{{ user.username }}</h1>
+    </div>
+    <div class="mb-3">
+        {% if user.about_me %}
+            <p>{{ user.about_me }}</p>
+        {% endif %}
+        <p>Last seen on {{ user.last_seen }} UTC</p>
+        <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following</p>
+        <div>
+            {% if user == current_user %}
+                <a class="btn btn-secondary" href="{{ url_for('edit_profile') }}">Edit profile</a>
+            {% elif not current_user.is_following(user) %}
+                <form action="{{ url_for('follow', username=user.username) }}"
+                      method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.submit(value='Follow', class='btn btn-primary') }}
+                </form>
+            {% elif current_user.is_following(user) %}
+                <form action="{{ url_for('unfollow', username=user.username) }}"
+                      method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.submit(value='Unfollow', class='btn btn-primary') }}
+                </form>
+            {% endif %}
+        </div>
+    </div>
+
+    <h2>Posts</h2>
+    <div>
+        {% for post in posts %}
+            <hr>
+            {% include '_post.html' %}
+        {% endfor %}
+    </div>
+    {% include '_post_pagination.html' %}
+{% endblock %}
