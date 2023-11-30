@@ -8,4 +8,5 @@ DATABASE PORT: 27017 (192.168.1.136:27017)
 MONGOEXPRESS PORT: 8081 (192.168.1.136:8081)
 USERNAME: root
 PASSWORD: password
-6. Start the app using "uvicorn app:app --reload"
+DB_NAME: buddyapi
+7. Start the app using "uvicorn app:app --reload"
