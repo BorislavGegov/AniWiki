@@ -10,3 +10,5 @@ USERNAME: root
 PASSWORD: password
 DB_NAME: buddyapi
 7. Start the app using "uvicorn app:app --reload"
+
+DATABASE_ENV url ---> MONGODB_URL="mongodb://root:password@192.168.1.136/buddyapi?retryWrites=true&w=majority"    
