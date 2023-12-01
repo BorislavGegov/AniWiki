@@ -3,7 +3,7 @@ db.createUser({
   pwd: 'password',
   roles: [
     {
-      role: 'readWrite',
+      role: 'dbAdmin',
       db: 'buddyapi'
     }
   ]
