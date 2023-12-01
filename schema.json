@@ -1,0 +1,261 @@
+{
+  "bsonType": "object",
+  "properties": {
+    "businesses": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "name": {
+            "bsonType": "string"
+          },
+          "plots": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "address": {
+                  "bsonType": "string"
+                },
+                "pitches": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "object",
+                    "properties": {
+                      "pitch_type": {
+                        "bsonType": "string"
+                      },
+                      "prices": {
+                        "bsonType": "object",
+                        "properties": {
+                          "adult": {
+                            "bsonType": "number"
+                          },
+                          "child": {
+                            "bsonType": "number"
+                          },
+                          "pet": {
+                            "bsonType": "number"
+                          },
+                          "car": {
+                            "bsonType": "number"
+                          },
+                          "night": {
+                            "bsonType": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "bookings": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "available",
+                    "taken",
+                    "failed"
+                  ]
+                },
+                "booked_pitches": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "object",
+                    "properties": {
+                      "plot_id": {
+                        "bsonType": "number"
+                      },
+                      "pithches_id": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "transaction": {
+                  "bsonType": "object",
+                  "properties": {
+                    "id": {
+                      "bsonType": "string"
+                    },
+                    "amount": {
+                      "bsonType": "number"
+                    },
+                    "balance_impact": {
+                      "bsonType": "object",
+                      "properties": {
+                        "cash": {
+                          "bsonType": "number"
+                        },
+                        "inbound_pending": {
+                          "bsonType": "number"
+                        },
+                        "outbound_pending": {
+                          "bsonType": "number"
+                        }
+                      }
+                    },
+                    "created": {
+                      "bsonType": "number"
+                    },
+                    "currency": {
+                      "bsonType": "string"
+                    },
+                    "description": {
+                      "bsonType": "string"
+                    },
+                    "financial_account": {
+                      "bsonType": "string"
+                    },
+                    "flow": {
+                      "bsonType": "string"
+                    },
+                    "flow_type": {
+                      "enum": [
+                        "outbound",
+                        "inbound"
+                      ]
+                    },
+                    "livemode": {
+                      "bsonType": "bool"
+                    },
+                    "status": {
+                      "enum": [
+                        "open",
+                        "closed",
+                        "failed"
+                      ]
+                    },
+                    "transition_status": {
+                      "bsonType": "object",
+                      "properties": {
+                        "posted_at": {
+                          "bsonType": "date"
+                        },
+                        "void_at": {
+                          "bsonType": "date"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "invoices": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "invoice_number": {
+                  "bsonType": "string"
+                },
+                "issue_date": {
+                  "bsonType": "date"
+                },
+                "due_date": {
+                  "bsonType": "date"
+                },
+                "currency": {
+                  "bsonType": "string"
+                },
+                "net_amount": {
+                  "bsonType": "number"
+                },
+                "gross_amount": {
+                  "bsonType": "number"
+                },
+                "seller_name": {
+                  "bsonType": "string"
+                },
+                "seller_address_1": {
+                  "bsonType": "string"
+                },
+                "seller_address_2": {
+                  "bsonType": "string"
+                },
+                "seller_address_city": {
+                  "bsonType": "string"
+                },
+                "seller_address_region": {
+                  "bsonType": "string"
+                },
+                "seller_address_postcode": {
+                  "bsonType": "string"
+                },
+                "seller_address_country": {
+                  "bsonType": "string"
+                },
+                "buyet_name": {
+                  "bsonType": "string"
+                },
+                "buyer_address_1": {
+                  "bsonType": "string"
+                },
+                "buyer_address_2": {
+                  "bsonType": "string"
+                },
+                "buyer_address_city": {
+                  "bsonType": "string"
+                },
+                "buyer_address_region": {
+                  "bsonType": "string"
+                },
+                "buyer_address_postcode": {
+                  "bsonType": "string"
+                },
+                "buyer_address_country": {
+                  "bsonType": "string"
+                },
+                "buyer_bank": {
+                  "bsonType": "object",
+                  "properties": {
+                    "name": {
+                      "bsonType": "string"
+                    },
+                    "account_number": {
+                      "bsonType": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "banks": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "name": {
+                  "bsonType": "string"
+                },
+                "accounts": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "object",
+                    "properties": {
+                      "name": {
+                        "bsonType": "string"
+                      },
+                      "account_number": {
+                        "bsonType": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
