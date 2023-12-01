@@ -161,3 +161,6 @@ cython_debug/
 
 # MongoDB Docker data
 /mongodb-data/
+
+
+/.idea/

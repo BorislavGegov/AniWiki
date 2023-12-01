@@ -21,3 +21,5 @@ else:
     with open('./schema.json', 'r') as file:
         schema = json.load(file)
     businesses_collection = db.create_collection("businesses", validator={'$jsonSchema': schema})
+
+import routes
