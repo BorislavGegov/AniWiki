@@ -1,13 +1,16 @@
 # BuddyAPI
 
 ## Development
-1. Clone the repository (buddyapi branch)
-2. Using the terminal, navigate to the project folder using "cd DIRECTORY"
-3. Create a virtual environment using "python -m venv venv"
-4. Install dependencies from the requirements.txt file using "venv\Scripts\pip install -r requirements.txt"
-5. Create a `.env` file with the following contents:
-```dotenv
-MONGODB_URL="mongodb://buddy:password@192.168.1.136/buddyapi"
-```
-6. Start the app using "uvicorn app:app --reload"
+```bash
+# Clone the buddyapi branch
+git clone -b buddyapi <repo_link>
 
+# Create the docker-compose image
+sudo docker-compose create && sudo docker-compose start
+
+# Create python venv and install the dependencies
+python -m venv venv && venv/bin/pip install -r requirements.txt
+
+# Activate the venv and start the app
+source venv/bin/activate && uvicorn app:app --reload
+```
