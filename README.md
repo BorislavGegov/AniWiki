@@ -1,16 +1,24 @@
 # BuddyAPI
 
 ## Development
-```bash
-# Clone the buddyapi branch
+1. Clone the `buddyapi` branch
+```shell
 git clone -b buddyapi <repo_link>
-
-# Create the docker-compose image
-sudo docker-compose create && sudo docker-compose start
-
-# Create python venv and install the dependencies
-python -m venv venv && venv/bin/pip install -r requirements.txt
-
-# Activate the venv and start the app
-source venv/bin/activate && uvicorn app:app --reload
+```
+2. Create and activate a Python virtual environment
+```shell
+python -m venv venv
+source venv/bin/activate
+```
+3. Install the dependencies
+```shell
+pip install -r requirements.txt
+```
+4. Create a `.env` file, and paste the following contents
+```dotenv
+MONGODB_URL="mongodb://buddy:password@192.168.1.136/buddyapi"
+```
+5. Start the development server
+```shell
+vicorn app:app --reload
 ```
