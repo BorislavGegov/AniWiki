@@ -20,5 +20,5 @@ MONGODB_URL="mongodb://buddy:password@192.168.1.136/buddyapi"
 ```
 5. Start the development server
 ```shell
-vicorn app:app --reload
+uvicorn app:app --reload
 ```
