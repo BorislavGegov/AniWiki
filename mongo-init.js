@@ -5,6 +5,10 @@ db.createUser({
     {
       role: 'dbAdmin',
       db: 'buddyapi'
-    }
+    },
+    {
+      role: 'readWrite',
+      db: 'buddyapi'
+    },
   ]
 })
