@@ -4,6 +4,9 @@
     "name": {
       "bsonType": "string"
     },
+    "auth_token": {
+      "bsonType": "string"
+    },
     "plots": {
       "bsonType": "array",
       "items": {
@@ -245,26 +248,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "roles": {
-      "bsonType": "array",
-      "items": {
-        "bsonType": "object",
-        "properties": {
-          "name": {
-            "bsonType": "string"
-          },
-          "token": {
-            "bsonType": "string"
-          },
-          "access_level": {
-            "bsonType": "number"
-          },
-          "post_access": {
-            "bsonType": "bool"
           }
         }
       }
