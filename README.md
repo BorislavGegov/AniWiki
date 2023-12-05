@@ -25,17 +25,23 @@ uvicorn app:app --reload
 
 Authentication check for developing endpoints
 ```python
-# Import the token validation function
-from auth import is_token_valid
+# Import the required libraries
+from fastapi import Header, status
+from fastapi.responses import Response
+from bson.objectid import ObjectId
 
 # Add the token header argument to the endpoint
 async def some_endpoint(id: str, token: str = Header()):
     ...
 
 # Add this snippet on top of every request
-if not await is_token_valid(id, token):
+business = await db["businesses"].find_one({"_id": ObjectId(id)})
+
+if not token == business["auth_token"]:
     return Response(
         status_code=status.HTTP_401_UNAUTHORIZED,
         content="Bad token"
     )
+
+# You can reuse the `business` variable
 ```
