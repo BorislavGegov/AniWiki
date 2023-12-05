@@ -2,44 +2,83 @@
   "bsonType": "object",
   "properties": {
     "name": {
-      "bsonType": "string"
+      "bsonType": [
+        "string",
+        "null"
+      ]
     },
     "auth_token": {
-      "bsonType": "string"
+      "bsonType": [
+        "string",
+        "null"
+      ]
     },
     "plots": {
       "bsonType": "array",
       "items": {
         "bsonType": "object",
         "properties": {
+          "id": {
+            "bsonType": [
+              "string",
+              "null"
+            ]
+          },
           "address": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "pitches": {
             "bsonType": "array",
             "items": {
               "bsonType": "object",
               "properties": {
+                "id": {
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
+                },
                 "pitch_type": {
-                  "bsonType": "string"
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "prices": {
                   "bsonType": "object",
                   "properties": {
                     "adult": {
-                      "bsonType": "number"
+                      "bsonType": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "child": {
-                      "bsonType": "number"
+                      "bsonType": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "pet": {
-                      "bsonType": "number"
+                      "bsonType": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "car": {
-                      "bsonType": "number"
+                      "bsonType": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "night": {
-                      "bsonType": "number"
+                      "bsonType": [
+                        "number",
+                        "null"
+                      ]
                     }
                   }
                 }
@@ -55,10 +94,9 @@
         "bsonType": "object",
         "properties": {
           "status": {
-            "enum": [
-              "available",
-              "taken",
-              "failed"
+            "bsonType": [
+              "string",
+              "null"
             ]
           },
           "booked_pitches": {
@@ -67,12 +105,18 @@
               "bsonType": "object",
               "properties": {
                 "plot_id": {
-                  "bsonType": "number"
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
                 },
-                "pithches_id": {
+                "pitches_id": {
                   "bsonType": "array",
                   "items": {
-                    "bsonType": "number"
+                    "bsonType": [
+                      "string",
+                      "null"
+                    ]
                   }
                 }
               }
@@ -82,64 +126,99 @@
             "bsonType": "object",
             "properties": {
               "id": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "amount": {
-                "bsonType": "number"
+                "bsonType": [
+                  "number",
+                  "null"
+                ]
               },
               "balance_impact": {
                 "bsonType": "object",
                 "properties": {
                   "cash": {
-                    "bsonType": "number"
+                    "bsonType": [
+                      "number",
+                      "null"
+                    ]
                   },
                   "inbound_pending": {
-                    "bsonType": "number"
+                    "bsonType": [
+                      "number",
+                      "null"
+                    ]
                   },
                   "outbound_pending": {
-                    "bsonType": "number"
+                    "bsonType": [
+                      "number",
+                      "null"
+                    ]
                   }
                 }
               },
               "created": {
-                "bsonType": "number"
+                "bsonType": [
+                  "number",
+                  "null"
+                ]
               },
               "currency": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "description": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "financial_account": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "flow": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "flow_type": {
-                "enum": [
-                  "outbound",
-                  "inbound"
+                "bsonType": [
+                  "string",
+                  "null"
                 ]
               },
               "livemode": {
                 "bsonType": "bool"
               },
               "status": {
-                "enum": [
-                  "open",
-                  "closed",
-                  "failed"
+                "bsonType": [
+                  "string",
+                  "null"
                 ]
               },
               "transition_status": {
                 "bsonType": "object",
                 "properties": {
                   "posted_at": {
-                    "bsonType": "date"
+                    "bsonType": [
+                      "date",
+                      "null"
+                    ]
                   },
                   "void_at": {
-                    "bsonType": "date"
+                    "bsonType": [
+                      "date",
+                      "null"
+                    ]
                   }
                 }
               }
@@ -154,73 +233,139 @@
         "bsonType": "object",
         "properties": {
           "invoice_number": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "issue_date": {
-            "bsonType": "date"
+            "bsonType": [
+              "date",
+              "null"
+            ]
           },
           "due_date": {
-            "bsonType": "date"
+            "bsonType": [
+              "date",
+              "null"
+            ]
           },
           "currency": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "net_amount": {
-            "bsonType": "number"
+            "bsonType": [
+              "number",
+              "null"
+            ]
           },
           "gross_amount": {
-            "bsonType": "number"
+            "bsonType": [
+              "number",
+              "null"
+            ]
           },
           "seller_name": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_1": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_2": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_city": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_region": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_postcode": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "seller_address_country": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyet_name": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_1": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_2": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_city": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_region": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_postcode": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_address_country": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "buyer_bank": {
             "bsonType": "object",
             "properties": {
               "name": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               },
               "account_number": {
-                "bsonType": "string"
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
               }
             }
           }
@@ -233,7 +378,10 @@
         "bsonType": "object",
         "properties": {
           "name": {
-            "bsonType": "string"
+            "bsonType": [
+              "string",
+              "null"
+            ]
           },
           "accounts": {
             "bsonType": "array",
@@ -241,10 +389,16 @@
               "bsonType": "object",
               "properties": {
                 "name": {
-                  "bsonType": "string"
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "account_number": {
-                  "bsonType": "string"
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
                 }
               }
             }

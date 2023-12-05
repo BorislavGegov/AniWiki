@@ -22,3 +22,26 @@ MONGODB_URL="mongodb://buddy:password@192.168.1.136/buddyapi"
 ```shell
 uvicorn app:app --reload
 ```
+
+Authentication check for developing endpoints
+```python
+# Import the required libraries
+from fastapi import Header, status
+from fastapi.responses import Response
+from bson.objectid import ObjectId
+
+# Add the token header argument to the endpoint
+async def some_endpoint(id: str, token: str = Header()):
+    ...
+
+# Add this snippet on top of every request
+business = await db["businesses"].find_one({"_id": ObjectId(id)})
+
+if not token == business["auth_token"]:
+    return Response(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        content="Bad token"
+    )
+
+# You can reuse the `business` variable
+```
