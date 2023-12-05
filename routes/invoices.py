@@ -39,3 +39,18 @@ async def read_invoices_after(id, date):
             if invoice["issue_date"] > converted_date:
                 result.append(invoice)
     return result
+
+@app.get("/business/{id}/invoices/issue_date/between/{date1}/{date2}")
+async def read_invoices_between(id, date1, date2):
+    business = await db.businesses.find_one({"_id": ObjectId(id)})
+    # tu sprawdzic token gdzies
+    format = '%Y-%m-%d'
+    converted_date1 = datetime.datetime.strptime(date1, format)
+    converted_date2 = datetime.datetime.strptime(date2, format)
+    result = []
+    invoices = business["invoices"]
+    if len(invoices) > 0:
+        for invoice in invoices:
+            if (invoice["issue_date"] > converted_date1) and (invoice["issue_date"] < converted_date2):
+                result.append(invoice)
+    return result
