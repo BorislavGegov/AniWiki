@@ -46,4 +46,4 @@ async def check_and_create_collection():
 async def startup_event():
     await check_and_create_collection()
 
-import routes.invoices, routes.business
+import routes.auth, routes.business, routes.invoices, routes.plots
