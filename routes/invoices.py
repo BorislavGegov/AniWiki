@@ -7,7 +7,7 @@ import json, datetime
 @app.get("/business/{id}/invoices")
 async def read_invoices(id, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
-    if token != business["auth_token"]:
+    if not token == business["auth_token"]:
         return Response(
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
@@ -20,7 +20,7 @@ async def read_invoices(id, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/before/{date}")
 async def read_invoices_before(id, date, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
-    if token != business["auth_token"]:
+    if not token == business["auth_token"]:
         return Response(
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
@@ -38,7 +38,7 @@ async def read_invoices_before(id, date, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/after/{date}")
 async def read_invoices_after(id, date, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
-    if token != business["auth_token"]:
+    if not token == business["auth_token"]:
         return Response(
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
@@ -56,7 +56,7 @@ async def read_invoices_after(id, date, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/between/{date1}/{date2}")
 async def read_invoices_between(id, date1, date2, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
-    if token != business["auth_token"]:
+    if not token == business["auth_token"]:
         return Response(
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
