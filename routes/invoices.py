@@ -26,13 +26,19 @@ async def read_invoices_before(id, date, token: str = Header()):
             content="Bad token"
         )
     format = '%Y-%m-%d'
-    converted_date = datetime.datetime.strptime(date, format)
+    try:
+        converted_date = datetime.datetime.strptime(date, format)
+    except ValueError:
+        return []
     result = []  
     invoices = business["invoices"]
     if len(invoices) > 0:
         for invoice in invoices:
-            if invoice["issue_date"] < converted_date:
-                result.append(invoice)
+            try:
+                if invoice["issue_date"] < converted_date:
+                    result.append(invoice)
+            except TypeError:
+                return []
     return result
 
 @app.get("/business/{id}/invoices/issue_date/after/{date}")
@@ -44,13 +50,19 @@ async def read_invoices_after(id, date, token: str = Header()):
             content="Bad token"
         )
     format = '%Y-%m-%d'
-    converted_date = datetime.datetime.strptime(date, format)
+    try:
+        converted_date = datetime.datetime.strptime(date, format)
+    except ValueError:
+        return []
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
         for invoice in invoices:
-            if invoice["issue_date"] > converted_date:
-                result.append(invoice)
+            try:
+                if invoice["issue_date"] > converted_date:
+                    result.append(invoice)
+            except TypeError:
+                return []
     return result
 
 @app.get("/business/{id}/invoices/issue_date/between/{date1}/{date2}")
@@ -62,12 +74,18 @@ async def read_invoices_between(id, date1, date2, token: str = Header()):
             content="Bad token"
         )
     format = '%Y-%m-%d'
-    converted_date1 = datetime.datetime.strptime(date1, format)
-    converted_date2 = datetime.datetime.strptime(date2, format)
+    try:
+        converted_date1 = datetime.datetime.strptime(date1, format)
+        converted_date2 = datetime.datetime.strptime(date2, format)
+    except ValueError:
+        return []
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
         for invoice in invoices:
-            if (invoice["issue_date"] > converted_date1) and (invoice["issue_date"] < converted_date2):
-                result.append(invoice)
+            try:
+                if (invoice["issue_date"] > converted_date1) and (invoice["issue_date"] < converted_date2):
+                    result.append(invoice)
+            except TypeError:
+                return []
     return result
