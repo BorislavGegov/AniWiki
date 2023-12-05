@@ -1,7 +1,6 @@
 from app import app, db
-from pymongo import MongoClient
 from bson.objectid import ObjectId
-from fastapi import Header, Response, status
+from fastapi import Header, Response, status, Body, Request
 import json, datetime
 
 @app.get("/business/{id}/invoices")
@@ -88,4 +87,22 @@ async def read_invoices_between(id, date1, date2, token: str = Header()):
                     result.append(invoice)
             except TypeError:
                 return []
+    return result
+
+@app.get("/business/{id}/invoices/search")
+async def read_invoices_between(id, token: str = Header(), request: Request = Request):
+    business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not token == business["auth_token"]:
+        return Response(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            content="Bad token"
+        )
+    jsonb = await request.json()
+    result = []
+    invoices = business["invoices"]
+    if len(invoices) > 0:
+        for invoice in invoices:
+            print(invoice)
+            print(jsonb)
+            # idk jak porownac invoice z jsonb :/
     return result
