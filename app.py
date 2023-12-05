@@ -48,3 +48,4 @@ async def startup_event():
 
 import routes.auth
 import routes.invoices
+import routes.banks
