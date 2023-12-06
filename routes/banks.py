@@ -32,14 +32,14 @@ async def update_token(id: str, body: Bank, token: str = Header()):
 @app.get('/business/{id}/banks')
 async def banks(id: str, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(id)})
+    if not business:
+        raise HTTPException(status_code=404, detail="Business not found")
 
     if not token == business["auth_token"]:
         return Response(
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
         )
-    if not business:
-        raise HTTPException(status_code=404, detail="Business not found")
     return business.get('banks')
 
 

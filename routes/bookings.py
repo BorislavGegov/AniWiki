@@ -3,7 +3,7 @@ from bson.objectid import ObjectId
 from fastapi import Header, status
 from fastapi.responses import Response
 
-@app.get("/bussiness/{id}/bookings/available")
+@app.get("/business/{id}/bookings/available")
 async def read_available_bookings(id, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(id)})
 
