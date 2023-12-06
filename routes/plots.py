@@ -17,7 +17,7 @@ async def read_plots(id, token: str = Header()):
 
 
 @app.get("/business/{id}/plots/{idp}")
-async def read_plots(id, idp, token: str = Header()):
+async def read_plot_id(id, idp, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
     if not token == business["auth_token"]:
         return Response(
@@ -30,5 +30,5 @@ async def read_plots(id, idp, token: str = Header()):
             return plot
     return Response(
         status_code=status.HTTP_404_NOT_FOUND,
-        content="Bad id"
+        content="Bad plot id"
     )
