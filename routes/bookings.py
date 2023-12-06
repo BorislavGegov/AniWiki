@@ -17,4 +17,4 @@ async def read_available_bookings(id, token: str = Header()):
     for booking in bookings:
         if booking['status'] == "available":
             available.append(booking)
-    return Response(status_code=200, content=available)
+    return available
