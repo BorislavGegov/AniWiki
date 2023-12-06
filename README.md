@@ -45,3 +45,8 @@ if not token == business["auth_token"]:
 
 # You can reuse the `business` variable
 ```
+
+For post endpoints use this to add records (of course it's an example)
+```python
+update_result = await db['businesses'].update_one({"_id": ObjectId(id)}, {"$push" : {"banks" : bank} })
+```
