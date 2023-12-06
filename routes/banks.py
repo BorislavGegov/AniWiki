@@ -27,10 +27,10 @@ async def update_token(id: str, body: Bank, token: str = Header()):
     
     bank = jsonable_encoder(body)
     await db['businesses'].update_one({"_id": ObjectId(id)}, {"$push" : {"banks" : bank} })
-    return {"message": f"Bank added to business {id}", "bank_data": body.dict()}
+    return Response( status_code=200, content={"message": f"Bank added to business {id}", "bank_data": body.dict()})
 
-@app.get('/business/{business_id}/banks')
-async def banks(business_id: str, token: str = Header()):
+@app.get('/business/{id}/banks')
+async def banks(id: str, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(id)})
 
     if not token == business["auth_token"]:
@@ -38,7 +38,6 @@ async def banks(business_id: str, token: str = Header()):
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
         )
-    business = await db.businesses.find_one({'_id': ObjectId(business_id)})
     if not business:
         raise HTTPException(status_code=404, detail="Business not found")
     return business.get('banks')
