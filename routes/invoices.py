@@ -90,7 +90,7 @@ async def read_invoices_between(id, date1, date2, token: str = Header()):
     return result
 
 @app.get("/business/{id}/invoices/search")
-async def read_invoices_between(id, token: str = Header(), request: Request = Request):
+async def read_invoices_search(id, token: str = Header(), request: Request = Request):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
     if not token == business["auth_token"]:
         return Response(
