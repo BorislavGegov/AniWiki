@@ -28,4 +28,7 @@ async def read_plots(id, idp, token: str = Header()):
     for plot in plots:
         if plot["id"] == idp:
             return plot
-    return "Plot not found"
+    return Response(
+        status_code=status.HTTP_404_NOT_FOUND,
+        content="Bad id"
+    )
