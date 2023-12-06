@@ -16,7 +16,7 @@ class Bank(BaseModel):
 
 
 @app.post("/business/{id}/banks/add")
-async def update_token(id: str, body: Bank, token: str = Header()):
+async def add_bank(id: str, body: Bank, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(id)})
 
     if not token == business["auth_token"]:
@@ -40,6 +40,6 @@ async def banks(id: str, token: str = Header()):
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
         )
-    return business.get('banks')
+    return Response(status_code=200, content=business.get('banks'))
 
 
