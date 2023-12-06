@@ -97,10 +97,20 @@ async def read_invoices_between(id, token: str = Header(), request: Request = Re
             status_code=status.HTTP_401_UNAUTHORIZED,
             content="Bad token"
         )
-    jsonb = await request.json()
+    try:
+        jsonb = await request.json()
+    except:
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid JSON body"
+        )
     result = []
     query_keywords = []
     invoices = business["invoices"]
+    # EXAMPLE USAGE:
+    # In request body, use a JSON object
+    # such as {"currency": "USD"}
+    # and look for the specified values!
     if len(invoices) > 0:
         for attribute, value in jsonb.items():
             query_keywords.append([attribute, value])
