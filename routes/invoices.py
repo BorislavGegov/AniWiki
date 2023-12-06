@@ -28,7 +28,10 @@ async def read_invoices_before(id, date, token: str = Header()):
     try:
         converted_date = datetime.datetime.strptime(date, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date, use the %Y-%m-%d format"
+        )
     result = []  
     invoices = business["invoices"]
     if len(invoices) > 0:
@@ -52,7 +55,10 @@ async def read_invoices_after(id, date, token: str = Header()):
     try:
         converted_date = datetime.datetime.strptime(date, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date, use the %Y-%m-%d format"
+        )
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
@@ -77,7 +83,10 @@ async def read_invoices_between(id, date1, date2, token: str = Header()):
         converted_date1 = datetime.datetime.strptime(date1, format)
         converted_date2 = datetime.datetime.strptime(date2, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date or dates, use the %Y-%m-%d format"
+        )
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
