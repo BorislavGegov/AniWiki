@@ -93,6 +93,12 @@
       "items": {
         "bsonType": "object",
         "properties": {
+          "id": {
+            "bsonType": [
+              "string",
+              "null"
+            ]
+          },
           "status": {
             "bsonType": [
               "string",
