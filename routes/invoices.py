@@ -6,11 +6,10 @@ import json, datetime
 @app.get("/business/{id}/invoices")
 async def read_invoices(id, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     invoices = business["invoices"]
     if len(invoices) > 0:
         return invoices
@@ -19,16 +18,18 @@ async def read_invoices(id, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/before/{date}")
 async def read_invoices_before(id, date, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     format = '%Y-%m-%d'
     try:
         converted_date = datetime.datetime.strptime(date, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date, use the %Y-%m-%d format"
+        )
     result = []  
     invoices = business["invoices"]
     if len(invoices) > 0:
@@ -43,16 +44,18 @@ async def read_invoices_before(id, date, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/after/{date}")
 async def read_invoices_after(id, date, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     format = '%Y-%m-%d'
     try:
         converted_date = datetime.datetime.strptime(date, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date, use the %Y-%m-%d format"
+        )
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
@@ -67,17 +70,19 @@ async def read_invoices_after(id, date, token: str = Header()):
 @app.get("/business/{id}/invoices/issue_date/between/{date1}/{date2}")
 async def read_invoices_between(id, date1, date2, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     format = '%Y-%m-%d'
     try:
         converted_date1 = datetime.datetime.strptime(date1, format)
         converted_date2 = datetime.datetime.strptime(date2, format)
     except ValueError:
-        return []
+        return Response(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            content="Invalid date or dates, use the %Y-%m-%d format"
+        )
     result = []
     invoices = business["invoices"]
     if len(invoices) > 0:
@@ -92,11 +97,10 @@ async def read_invoices_between(id, date1, date2, token: str = Header()):
 @app.get("/business/{id}/invoices/search")
 async def read_invoices_search(id, token: str = Header(), request: Request = Request):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     try:
         jsonb = await request.json()
     except:
