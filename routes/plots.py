@@ -51,7 +51,7 @@ async def get_pitch(id: str, plot_id: str, pitch_id: str, token: str = Header())
             for pitch in pitches:
                 if pitch["id"] == pitch_id:
                     return pitch
-        return Response(
+    return Response(
         status_code=status.HTTP_404_NOT_FOUND,
         content="Pitch not found"
     )
