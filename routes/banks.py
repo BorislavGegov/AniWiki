@@ -42,6 +42,24 @@ async def banks(id: str, token: str = Header()):
         )
     return business.get('banks')
 
+@app.get('/business/{business_id}/banks/accounts')
+async def bank(business_id: str, token: str = Header()):
+    business = await db["businesses"].find_one({"_id": ObjectId(business_id)})
+    if not business:
+        raise HTTPException(status_code=404, detail="Business not found")
+
+    if not token == business["auth_token"]:
+        return Response(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            content="Bad token"
+        )
+
+    accounts = []
+    for bank in business['banks']:
+        accounts += bank['accounts']
+
+    return accounts
+
 @app.get('/business/{business_id}/banks/{bank_id}')
 async def bank(business_id: str, bank_id: str, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(business_id)})
