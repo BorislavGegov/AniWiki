@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 from fastapi.responses import Response
 from fastapi.encoders import jsonable_encoder
 from fastapi import Header, status
+from pymongo.results import UpdateResult
 
 class Prices(BaseModel):
     adult: int | None
@@ -24,6 +25,15 @@ async def change_prices(id: str, plot_id: str, pitch_id: str, body: Prices, toke
         )
 
     prices = jsonable_encoder(body)
+    plot_ids = []
+    pitch_ids = []
+    for plot in business['plots']:
+        plot_ids.append(plot["id"])
+        for pitch in plot['pitches']:
+            pitch_ids.append(pitch["id"])
+    if plot_id not in plot_ids or pitch_id not in pitch_ids:
+        return Response(status_code=404, content="Id not found")
+    
     await db["businesses"].update_one(
         {"_id": ObjectId(id)},
         {
@@ -36,5 +46,4 @@ async def change_prices(id: str, plot_id: str, pitch_id: str, body: Prices, toke
             {"pitchElement.id": pitch_id}
         ]
     )
-
     return {"message": f"Prices updated for plot {plot_id} and pitch {pitch_id}", "prices_data": body.dict()}
