@@ -15,7 +15,7 @@ class Prices(BaseModel):
     night: int | None
 
 @app.put("/business/{id}/plots/{plot_id}/pitches/{pitch_id}/prices")
-async def add_bank(id: str, plot_id: str, pitch_id: str, body: Prices, token: str = Header()):
+async def change_prices(id: str, plot_id: str, pitch_id: str, body: Prices, token: str = Header()):
     business = await db["businesses"].find_one({"_id": ObjectId(id)})
     if not token == business["auth_token"]:
         return Response(
