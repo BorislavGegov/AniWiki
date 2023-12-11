@@ -75,3 +75,5 @@ async def bank(business_id: str, bank_id: str, token: str = Header()):
     for bank in business['banks']:
         if bank['id'] == bank_id:
             return bank
+
+    raise HTTPException(status_code=404, detail="Bank not found")
