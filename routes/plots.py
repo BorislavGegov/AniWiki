@@ -5,11 +5,10 @@ from fastapi import Response, status, Header
 @app.get("/business/{id}/plots")
 async def read_plots(id, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     plots = business["plots"]
     if len(plots) > 0:
         return plots
@@ -19,11 +18,10 @@ async def read_plots(id, token: str = Header()):
 @app.get("/business/{id}/plots/{idp}")
 async def read_plot_id(id, idp, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     plots = business["plots"]
     for plot in plots:
         if plot["id"] == idp:

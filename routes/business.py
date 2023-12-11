@@ -15,10 +15,9 @@ async def read_businesses():
 @app.get("/business/{id}")
 async def read_business(id, token: str = Header()):
     business = await db.businesses.find_one({"_id": ObjectId(id)})
+    if not business:
+        return Response(status_code=status.HTTP_404_NOT_FOUND, content="Business not found")
     if not token == business["auth_token"]:
-        return Response(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            content="Bad token"
-        )
+        return Response(status_code=status.HTTP_401_UNAUTHORIZED, content="Bad token")
     business["_id"] = id
     return business
