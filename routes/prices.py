@@ -47,3 +47,27 @@ async def change_prices(id: str, plot_id: str, pitch_id: str, body: Prices, toke
         ]
     )
     return {"message": f"Prices updated for plot {plot_id} and pitch {pitch_id}", "prices_data": body.dict()}
+
+@app.get("/business/{id}/plots/{plot_id}/pitches/{pitch_id}/prices")
+async def read_prices(id: str, plot_id: str, pitch_id: str, token: str = Header()):
+    business = await db.businesses.find_one({"_id": ObjectId(id)})
+
+    if not token == business["auth_token"]:
+        return Response(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            content="Bad token"
+        )
+    
+    plots = business["plots"]
+    for plot in plots:
+        if plot["id"] == plot_id:
+            pitches = plot["pitches"]
+            for pitch in pitches:
+                if pitch["id"] == pitch_id:
+                    return pitch["prices"]
+                
+    return Response(
+        status_code=status.HTTP_404_NOT_FOUND,
+        content="Bad plot_id"
+    )
+    
